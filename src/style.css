@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+
+ul {
+  @apply list-disc list-outside ml-5 space-y-2 text-gray-700 leading-relaxed;
+}
+
+* {
+  font-family: "LXGW WenKai Screen", sans-serif;
+}
+
+pre,
+code {
+  font-family: "LXGW WenKai Screen", sans-serif;
+  font-size: 15px;
+  background-color: #cccccc;
+  padding: 2px 4px;
+  border-radius: 4px;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+p,
+ul,
+li {
+  @apply text-lg
+}
+
+li:last-child {
+  padding-bottom: 10px;
+}
+
+.markdown-body>p {
+  padding-bottom: 10px;
+}
+
+.markdown-body {
+  a {
+    @apply relative inline-block no-underline transition-colors duration-300;
+    color: #000;
+    z-index: 1;
+  }
+
+  a::before {
+    content: "";
+    @apply absolute left-0 right-0 bottom-0 -z-10 transition-all duration-300 ease-in-out;
+    height: 20%;
+    background-color: #8e6dd58e;
+  }
+
+  a:hover {
+    color: #ffffff !important;
+  }
+
+  a:hover::before {
+    height: 100%;
+    background-color: #8e6dd5;
+    @apply rounded-sm;
+  }
+}

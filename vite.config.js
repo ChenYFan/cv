@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
 import Crypter from './src/utils/crypter.js'
+import fs from 'fs'
 // import CYAN_VAR from './var.json'
 let CYAN_VAR;
 

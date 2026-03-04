@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 ul {
   @apply list-disc list-outside ml-5 space-y-2 text-gray-700 leading-relaxed;
 }
@@ -13,7 +12,8 @@ pre,
 code {
   font-family: "LXGW WenKai Screen", sans-serif;
   font-size: 15px;
-  background-color: #cccccc;
+  color: var(--color-gray-700);
+  background-color: var(--color-gray-200);
   padding: 2px 4px;
   border-radius: 4px;
   white-space: normal !important;
@@ -23,15 +23,32 @@ code {
 p,
 ul,
 li {
-  @apply text-lg
+  @apply text-lg;
 }
 
 li:last-child {
   padding-bottom: 10px;
 }
 
-.markdown-body>p {
-  padding-bottom: 10px;
+.markdown-body p {
+  padding-bottom: 2px;
+  @apply text-base;
+}
+
+
+.titleh {
+  @apply text-2xl font-bold my-2 pb-1 border-b border-gray-200 text-gray-900;
+  @apply relative inline-block no-underline font-bold mb-4;
+  color: #000;
+  z-index: 99;
+}
+
+.titleh::before {
+  @apply absolute left-0 right-0 bottom-1;
+  content: "";
+  height: 25%;
+  background-color: #4d23a850;
+
 }
 
 .markdown-body {
@@ -56,5 +73,20 @@ li:last-child {
     height: 100%;
     background-color: #8e6dd5;
     @apply rounded-sm;
+  }
+}
+
+:is(.printable, .markdown-body a, .titleh, pre, code) {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@layer utilities {
+  .break-page-before {
+    break-before: page;
+  }
+
+  .break-page-after {
+    break-after: page;
   }
 }

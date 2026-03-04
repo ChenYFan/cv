@@ -21,7 +21,7 @@ const props = defineProps({
 
 
 <template>
-    <div class="mb-8">
+    <div class="mb-1">
         <div class="flex justify-between items-center mb-1">
 
             <div class="flex items-center gap-3">
@@ -43,7 +43,7 @@ const props = defineProps({
         <div class="flex justify-between items-center mb-3 pt-3 text-sm">
             <div class="flex gap-2 flex-wrap  max-w-7/12 min-w-4/12">
                 <template v-for="(value, key) in props.projectTechStack" :key="key">
-                    <span class="inline-flex items-center px-2 rounded font-mono text-[14px] text-gray-700 bg-gray-100">
+                    <span class="inline-flex items-center px-2 rounded font-mono text-[14px] text-gray-700 bg-gray-100 printable">
                         <img v-if="value.iconPath" :src="value.iconPath" class="w-3 h-3 inline-block mr-1"
                             alt="tech stack icon" />
                         <span>{{ value.name }}</span>
@@ -60,7 +60,7 @@ const props = defineProps({
                 </a>
             </div>
         </div>
-        <Mark :content="props.projectDescription" class="text-gray-700 leading-relaxed text-base" />
+        <Mark :content="props.projectDescription" class="text-gray-700 leading-relaxed text-sm" />
     </div>
 
 </template>

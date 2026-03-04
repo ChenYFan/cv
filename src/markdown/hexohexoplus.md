@@ -1,9 +1,5 @@
-针对静态Hexo博客缺乏原生后台、移动端发布困难的痛点，设计并实现了一套基于`Cloudflare Workers`的全功能 Serverless 管理面板。其具有以下优势：
+- **Serverless架构**，通过`Cloudflare KV`存储全局配置，实现零成本、免维护部署。
 
-- 边缘侧架构设计： 摒弃传统后端架构，利用`V8 Isolates`机制在边缘节点实现毫秒级响应，通过`Cloudflare KV`存储全局配置，实现零成本、免维护部署。
+- 基于`GitHub API`构建文件管理系统，实现文章CRUD、图床功能及Webhook触发CI。
 
-- GitHub 全自动化流转： 基于`GitHub API v3`构建文件管理系统，实现文章在线增删改查、图床功能及`Webhook`触发自动化构建流程CI。
-
-- 安全认证机制： 独立实现`OAuth 2.0`授权流，确保管理面板对 GitHub 仓库的操作权限安全可控，防止密钥泄露。
-
-- 工程化实践： 确保代码在受限的`Worker`环境下依然具备高度的可维护性，吸引了多位外部开发者参与维护。
+- 使用自行改进后的`Vue SSR渲染`，能够在`10ms`内完成ServerRender

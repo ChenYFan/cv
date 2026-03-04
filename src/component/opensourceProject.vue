@@ -20,7 +20,7 @@ const projectList = [
         "projectRepoIcon": GithubIcon,
         "projectPath": "ChenYFan/ClientWorker",
         "projectMaintainTag": "基于规则的前端路由 · 创建者",
-        "projectMaintainTime": "278⭐ · 2021.06 - 至今",
+        "projectMaintainTime": "278⭐ · 2021.6 - 至今",
         "projectTechStack": {
             "JavaScript": { "name": "JavaScript", "iconPath": JavaScriptIcon},
             "Vue.js": { "name": "Vue.js", "iconPath": VueIcon }
@@ -33,8 +33,8 @@ const projectList = [
         "projectRepoHost": "github.com",
         "projectRepoIcon": GithubIcon,
         "projectPath": "HexoPlusPlus/HexoPlusPlus",
-        "projectMaintainTag": "ServerLess编辑器的尝试 · 创建者",
-        "projectMaintainTime": "570⭐ · 2021.01 - 2022.06",
+        "projectMaintainTag": "ServerLess编辑器的尝试 · 维护者",
+        "projectMaintainTime": "1.8K⭐ · 2021.1 - 2023.6",
         "projectTechStack": {
             "JavaScript": { "name": "JavaScript", "iconPath": JavaScriptIcon},
             "Vue.js": { "name": "Vue.js", "iconPath": VueIcon },

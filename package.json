@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "getvar": "wget $VAR_URL -O var.json",
     "dev": "vite",
-    "build": "npm run getvar && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {

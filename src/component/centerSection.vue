@@ -30,7 +30,7 @@ const { _$, _$$ } = inject('resumeContext');
                 linkUrl="https://github.com/ChenYFan" :iconPath="GithubIcon" />
             <CenterItem label="学校" :value="'浙江科技大学'" :isALink="true" :iconPath="SchoolIcon"
                 linkUrl="https://www.zust.edu.cn" />
-            <CenterItem label="学历" :value="'本科(2027届, 软件工程)'" :isALink="false" :iconPath="AcdemicIcon" />
+            <CenterItem label="学历" :value="'本科(27届, 软件工程)'" :isALink="false" :iconPath="AcdemicIcon" />
             <CenterItem label="博客" :value="'blog.eurekac.cn'" :isALink="true" linkUrl="https://blog.eurekac.cn"
                 :iconPath="BlogIcon" />
             <CenterItem label="邮箱" :value="'chenyf@cyfan.top'" :isALink="true" linkUrl="mailto:chenyf@cyfan.top"
@@ -40,9 +40,9 @@ const { _$, _$$ } = inject('resumeContext');
         </div>
     </div>
 
-    <div class="hidden md:inline-block md:w-1/4 shrink-0">
+    <div class="hidden md:inline-block md:w-1/4 shrink-0 mt-4">
         <div class="w-[80%] aspect-[3/4] bg-gray-100 rounded overflow-hidden border border-gray-200 shadow-sm">
-            <!-- <img src="" alt="求职照" class="w-full h-full object-cover" /> -->
+            <img :src="_$.VAR.CYANFALSE_AVATAR[_$$]" alt="求职照" class="w-full h-full object-cover" />
         </div>
     </div>
 </template>

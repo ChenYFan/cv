@@ -7,7 +7,7 @@ import OpensourceProject from './component/opensourceProject.vue';
 import CompetitionProject from './component/competitionProject.vue';
 
 import MyCert from './markdown/myCert.md?raw'
-
+import MyselfSummary from './markdown/myselfSummary.md?raw'
 import VueIcon from './assets/icon/vue.svg'
 
 const _$ = __RESUME_DATA__;
@@ -29,7 +29,7 @@ const checkKey = (key) => {
 onMounted(() => {
   const key = (new URLSearchParams(window.location.search)).get('key')
   if (checkKey(key)) {
-    for (const k in _$.VAR) _$.VAR[k][1] = crypter.decrypt(_$.VAR[k][1], key)
+    for (const k in _$.VAR) _$.VAR[k][1] = crypter.decrypt(_$.VAR[k][1], key).replace(/\<\|\|\>/g, ' ')
     _$$.value = 1
   }
 })
@@ -42,7 +42,7 @@ provide('resumeContext', { _$, _$$ });
   <div class="min-h-screen bg-gray-50 font-sans text-gray-800 selection:bg-blue-200 selection:text-blue-900">
 
     <header
-      class="bg-white border-b border-gray-100 py-4 px-2 md:px-12 md:pt-4 flex justify-between items-center sticky top-0 z-10  max-w-4xl text-center mx-auto text-center">
+      class="bg-white border-b border-gray-100 py-2 px-2 md:px-12 flex justify-between items-center sticky top-0 z-999  max-w-4xl text-center mx-auto text-center">
       <div class="text-base font-bold tracking-wide text-gray-800 w-full md:w-auto">
         CyanFalse's Resume
       </div>
@@ -59,7 +59,7 @@ provide('resumeContext', { _$, _$$ });
 
       <section class="mb-2 ">
         <h2 class="titleh">专业技能</h2>
-        <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 leading-relaxed text-xl">
+        <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 leading-relaxed text-base">
           <li>擅长JavaScript及衍生框架Vue，熟练React、Next.js进行前端开发</li>
           <li>熟练NodeJS构建轻量后端服务，具备使用Serverless架构、容器和集群的经验。</li>
           <li>精通Vite、Rollup等构建工具的配置与插件开发，熟练Git/SVN，具有领导团队开发经验。</li>
@@ -69,14 +69,15 @@ provide('resumeContext', { _$, _$$ });
       </section>
 
       <section>
-        <h2 class="titleh">开源项目</h2>
+        <h2 class="titleh">开源经历</h2>
         <OpensourceProject />
         <div class="print:break-before-page" />
         <h2 class="titleh print:pt-3">项目经验</h2>
         <CompetitionProject />
         <h2 class="titleh print:pt-3">证书与荣誉</h2>
         <Mark :content="MyCert" class="text-gray-700 leading-relaxed text-sm" />
-
+        <h2 class="titleh print:pt-3">自我总结</h2>
+        <Mark :content="MyselfSummary" class="text-gray-700 leading-relaxed text-sm" />
       </section>
     </main>
   </div>

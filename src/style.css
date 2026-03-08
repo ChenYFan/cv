@@ -48,8 +48,8 @@ li:last-child {
 
 
 .titleh {
-  @apply text-2xl font-bold my-2 pb-1 border-b border-gray-200 text-gray-900;
-  @apply relative inline-block no-underline font-bold mb-4;
+  @apply text-2xl font-bold pb-1 border-b border-gray-200 text-gray-900;
+  @apply relative inline-block no-underline font-bold mb-2;
   color: #000;
   z-index: 99;
 }

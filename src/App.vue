@@ -55,9 +55,9 @@ provide('resumeContext', { _$, _$$ });
       </div>
     </header>
 
-    <main class="max-w-4xl mx-auto bg-white shadow-sm md:my-2 p-6 pt-0 rounded-sm">
+    <main class="max-w-4xl mx-auto bg-white shadow-sm md:my-2 p-6 pt-0 rounded-sm print:border-none print:shadow-none">
 
-      <section class="flex flex-row items-start gap-8 mb-2">
+      <section class="flex flex-row items-start gap-8">
         <CenterSection />
       </section>
 
@@ -75,7 +75,7 @@ provide('resumeContext', { _$, _$$ });
       <section>
         <h2 class="titleh">开源经历</h2>
         <OpensourceProject />
-        <div class="print:break-before-page" />
+        <!-- <div class="print:break-before-page" /> -->
         <h2 class="titleh print:pt-3">项目经验</h2>
         <CompetitionProject />
         <h2 class="titleh print:pt-3">证书与荣誉</h2>

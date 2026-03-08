@@ -25,12 +25,16 @@ const checkKey = (key) => {
   }
 }
 
-
+const searchParams = new URLSearchParams(window.location.search)
 onMounted(() => {
-  const key = (new URLSearchParams(window.location.search)).get('key')
+  const key = searchParams.get('key')
   if (checkKey(key)) {
-    for (const k in _$.VAR) _$.VAR[k][1] = crypter.decrypt(_$.VAR[k][1], key).replace(/\<\|\|\>/g, ' ')
+    for (const k in _$.VAR){
+       _$.VAR[k][1] = crypter.decrypt(_$.VAR[k][1], key).replace(/\<\|\|\>/g, ' ')
+       if(k.match(/_IMAGE$/)) _$.VAR[k][1] = "https://i.eurekac.cn/" + _$.VAR[k][1]
+    }
     _$$.value = 1
+    if (!Boolean(searchParams.get('nopingfang'))) document.documentElement.style.setProperty('--app-font-family', '"PingFang", sans-serif');
   }
 })
 
@@ -75,7 +79,12 @@ provide('resumeContext', { _$, _$$ });
         <h2 class="titleh print:pt-3">项目经验</h2>
         <CompetitionProject />
         <h2 class="titleh print:pt-3">证书与荣誉</h2>
-        <Mark :content="MyCert" class="text-gray-700 leading-relaxed text-sm" />
+        <Mark :content="MyCert
+          .replace(/SERVICE_OUTSOURCING_16_IMAGE/g, _$.VAR.SERVICE_OUTSOURCING_16_IMAGE[_$$])
+          .replace(/COMPUTE_DESIGN_17_IMAGE/g, _$.VAR.COMPUTE_DESIGN_17_IMAGE[_$$])
+          .replace(/COMPUTE_DESIGN_18_IMAGE/g, _$.VAR.COMPUTE_DESIGN_18_IMAGE[_$$])
+          .replace(/CN_SERVICE_OUTSOURCING_11_IMAGE/g, _$.VAR.CN_SERVICE_OUTSOURCING_11_IMAGE[_$$])
+          " class="text-gray-700 leading-relaxed text-sm" />
         <h2 class="titleh print:pt-3">自我总结</h2>
         <Mark :content="MyselfSummary" class="text-gray-700 leading-relaxed text-sm" />
       </section>

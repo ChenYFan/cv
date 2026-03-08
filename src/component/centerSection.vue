@@ -42,7 +42,7 @@ const { _$, _$$ } = inject('resumeContext');
 
     <div class="hidden md:inline-block md:w-1/4 shrink-0 mt-4">
         <div class="w-[80%] aspect-[3/4] bg-gray-100 rounded overflow-hidden border border-gray-200 shadow-sm">
-            <img :src="_$.VAR.CYANFALSE_AVATAR[_$$]" alt="求职照" class="w-full h-full object-cover" />
+            <img :src="_$.VAR.CYANFALSE_IMAGE[_$$]" alt="求职照" class="w-full h-full object-cover" />
         </div>
     </div>
 </template>

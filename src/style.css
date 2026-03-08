@@ -1,16 +1,27 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'PingFang';
+  src: url('./fonts/PingFang-Medium.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --app-font-family: "LXGW WenKai Screen", sans-serif;
+}
+
 ul {
   @apply list-disc list-outside ml-5 space-y-2 text-gray-700 leading-relaxed;
 }
 
 * {
-  font-family: "LXGW WenKai Screen", sans-serif;
+  font-family: var(--app-font-family);
 }
 
 pre,
 code {
-  font-family: "LXGW WenKai Screen", sans-serif;
+  font-family: var(--app-font-family);
   font-size: 15px;
   color: var(--color-gray-700);
   background-color: var(--color-gray-200);

@@ -49,7 +49,7 @@ const updateProjectData = () => {
                 "Qwen": { "name": "Qwen", "iconPath": QwenIcon }
 
             },
-            "projectDescription": EvoIndustryDesc.replace(/\<\|EVOINDUSTRY_IMAGE\|\>/g, _$.VAR.EVOINDUSTRY_IMAGE[_$$.value])
+            "projectDescription": EvoIndustryDesc
         },
         {
             "isOpenSource": false,

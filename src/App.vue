@@ -5,6 +5,7 @@ import Mark from './utils/mark.vue'
 import CenterSection from './component/centerSection.vue'
 import OpensourceProject from './component/opensourceProject.vue';
 import CompetitionProject from './component/competitionProject.vue';
+import WorkHistory from './component/workHistory.vue';
 
 import MyCert from './markdown/myCert.md?raw'
 import MyselfSummary from './markdown/myselfSummary.md?raw'
@@ -29,9 +30,9 @@ const searchParams = new URLSearchParams(window.location.search)
 onMounted(() => {
   const key = searchParams.get('key')
   if (checkKey(key)) {
-    for (const k in _$.VAR){
-       _$.VAR[k][1] = crypter.decrypt(_$.VAR[k][1], key).replace(/\<\|\|\>/g, ' ')
-       if(k.match(/_IMAGE$/)) _$.VAR[k][1] = "https://i.eurekac.cn/" + _$.VAR[k][1]
+    for (const k in _$.VAR) {
+      _$.VAR[k][1] = crypter.decrypt(_$.VAR[k][1], key).replace(/\<\|\|\>/g, ' ')
+      if (k.match(/_IMAGE$/)) _$.VAR[k][1] = "https://i.eurekac.cn/" + _$.VAR[k][1]
     }
     _$$.value = 1
     if (!Boolean(searchParams.get('nopingfang'))) document.documentElement.style.setProperty('--app-font-family', '"PingFang", sans-serif');
@@ -64,14 +65,17 @@ provide('resumeContext', { _$, _$$ });
       <section class="mb-2 ">
         <h2 class="titleh">专业技能</h2>
         <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 leading-relaxed text-base">
-          <li>擅长JavaScript及衍生框架Vue，熟练React、Next.js进行前端开发</li>
+          <li>擅长JavaScript及衍生框架Vue、NuxtJS，熟练React、NextJS进行前端/全栈开发</li>
           <li>熟练NodeJS构建轻量后端服务，具备使用Serverless架构、容器和集群的经验。</li>
           <li>精通Vite、Rollup等构建工具的配置与插件开发，熟练Git/SVN，具有领导团队开发经验。</li>
           <li>熟悉Kotlin移动端开发，了解并掌握Python、Go在数据处理与云原生服务开发中的优势。</li>
           <li>熟练使用<b>AI工具</b>加速开发流程，同时也具备<b>完全脱离AI工具</b>独立开发的能力。</li>
         </ul>
       </section>
-
+      <section>
+        <h2 class="titleh">工作经历</h2>
+        <WorkHistory />
+      </section>
       <section>
         <h2 class="titleh">开源经历</h2>
         <OpensourceProject />

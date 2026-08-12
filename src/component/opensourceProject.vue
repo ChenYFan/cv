@@ -32,7 +32,7 @@ const projectList = [
         "projectName": "HexoPlusPlus",
         "projectRepoHost": "github.com",
         "projectRepoIcon": GithubIcon,
-        "projectPath": "HexoPlusPlus/HexoPlusPlus",
+        "projectPath": "Qexo/Qexo",
         "projectMaintainTag": "ServerLess编辑器的尝试 · 维护者",
         "projectMaintainTime": "1.8K⭐ · 2021.1 - 2023.6",
         "projectTechStack": {

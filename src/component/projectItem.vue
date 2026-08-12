@@ -40,7 +40,7 @@ const props = defineProps({
             </span>
         </div>
 
-        <div class="flex justify-between items-center mb-3 pt-3 text-sm">
+        <div class="flex justify-between items-center mb-3 pt-3 text-sm" v-if="!!Object.keys(props.projectTechStack).length || props.projectRepoHost">
             <div class="flex gap-2 flex-wrap  max-w-7/12 min-w-1/2">
                 <template v-for="(value, key) in props.projectTechStack" :key="key">
                     <span class="inline-flex items-center px-2 rounded font-mono text-[14px] text-gray-700 bg-gray-100 printable">

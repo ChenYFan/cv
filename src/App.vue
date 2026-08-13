@@ -66,10 +66,9 @@ provide('resumeContext', { _$, _$$ });
         <h2 class="titleh">专业技能</h2>
         <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 leading-relaxed text-base">
           <li>擅长JavaScript及衍生框架Vue、NuxtJS，熟练React、NextJS进行前端/全栈开发</li>
-          <li>熟练NodeJS构建轻量后端服务，具备使用Serverless架构、容器和集群的经验。</li>
-          <li>精通Vite、Rollup等构建工具的配置与插件开发，熟练Git/SVN，具有领导团队开发经验。</li>
-          <li>熟悉Kotlin移动端开发，了解并掌握Python、Go在数据处理与云原生服务开发中的优势。</li>
-          <li>熟练使用<b>AI工具</b>加速开发流程，同时也具备<b>完全脱离AI工具</b>独立开发的能力。</li>
+          <li>熟练NodeJS构建轻量后端服务，具备使用Serverless架构、容器和集群的经验。熟练Git/SVN，具有领导团队开发经验。</li>
+          <li>熟悉Agentic Loop，深度参与AI Infra基建（可观测、Harness、Ch**s AI-SDK），也曾参与过Embed Agent、AI Evaluate等AI在企业中台中的应用。</li>
+          <li>熟练使用<b>AI工具（CC/Codex/OC）</b>加速开发流程，同时也具备<b>完全脱离AI工具</b>独立开发的能力。</li>
         </ul>
       </section>
       <section>

@@ -20,8 +20,8 @@ const { _$, _$$ } = inject('resumeContext');
             <h1 class="text-3xl font-bold tracking-widest mr-2 md:text-5xl md:mr-6 text-gray-800">{{ _$.VAR.CYANFALSE_REALNAME[_$$]}}</h1>
 
             <div class="flex flex-col text-sm text-gray-600 gap-1 border-l-2 border-gray-300 pl-4">
-                <div>实习意向：前端开发 / 全栈开发</div>
-                <div>求职状态：随时入职</div>
+                <div>就职意向：前端开发 / 全栈开发</div>
+                <div>求职状态：两周内入职</div>
             </div>
         </div>
 
